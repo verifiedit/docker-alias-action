@@ -6,13 +6,10 @@ on:
 jobs:
   example:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
 
     steps:
-      - run: shopt -s expand_aliases
       - run: |
+          shopt -s expand_aliases
           alias hi="echo hi there"
           alias
           hi
