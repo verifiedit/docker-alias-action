@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: shopt -s expand_aliases
+      - run: |
+          alias hi="echo hi there"
+          hi
+
+      - run: hi
 
       - name: Setup alias
         uses: verifiedit/docker-alias-action@main
