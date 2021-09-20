@@ -1,0 +1,17 @@
+name: Example Docker Alias Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup alias
+        uses: verifiedit/docker-alias-action@main
+        with:
+          alias: say
+          dockerImage: docker/whalesay
+
+      - name: Use alias in subsequent step
+        run: say cowsay aliases rule

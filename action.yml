@@ -1,0 +1,12 @@
+name: Docker Alias Action for GitHub Actions
+description: Automate your GitHub workflows using docker containers set as alias commands
+inputs:
+  alias:
+    required: true
+    description: Shell alias to create for docker run command e.g. aws
+  dockerimage:
+    required: true
+    description: Repository to use in your alias command such as amazon/aws-cli, it can include version
+runs:
+  using: 'node12'
+  main: 'dist/setup/index.js'
