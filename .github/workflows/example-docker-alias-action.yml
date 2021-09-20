@@ -10,6 +10,7 @@ jobs:
       - run: shopt -s expand_aliases
       - run: |
           alias hi="echo hi there"
+          alias
           hi
 
       - run: hi
