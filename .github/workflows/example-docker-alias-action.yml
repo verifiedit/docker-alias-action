@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: zsh
+        shell: bash
 
     steps:
       - run: shopt -s expand_aliases
