@@ -13,5 +13,8 @@ jobs:
           alias: say
           dockerImage: docker/whalesay
 
+      - name: List all aliases
+        run: alias
+
       - name: Use alias in subsequent step
         run: say cowsay aliases rule
