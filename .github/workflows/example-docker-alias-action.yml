@@ -6,6 +6,10 @@ on:
 jobs:
   example:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: zsh
+
     steps:
       - run: shopt -s expand_aliases
       - run: |
